@@ -1,5 +1,5 @@
 <template>
-    <div class="card mb-3" style="max-width: 2000px;">
+    <div class="card mb-3" style="max-width: 1000px;">
   <div class="row g-0">
     <div class="col-md-4">
        <img src="../assets/images/login.jpg" alt="" class="img-fluid">
