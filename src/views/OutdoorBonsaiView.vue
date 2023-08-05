@@ -8,7 +8,7 @@
     <div class="row" >
       <div class="col-md-5 h-100 w-100 " >
         <div class="card text-center  shadow-sm" v-for="product in products" :key="product.id">
-            <div class="card-img-top"><img :src="(`https://tbhpwebdevapi.azurewebsites.net/api/BonsaiV2/All/${product.productImage}`)" :alt="productImage" class=""></div>
+            <div class="card-img-top"><img :src="`/images/${product.productImage}`" alt="" class=""></div>
             <div class="card-body">
               <h5>{{id}}</h5>
               <h5>{{product.productTitle}}</h5>

@@ -8,11 +8,11 @@
       <div class="col-md-5 h-100 w-100 " >
         <div class="card text-center  shadow-sm" v-for="product in products" :key="product.id">
             <div class="card-img-top">
-              <img :src="product.productImage" :alt="productImage" class="">
+              <img :src="`/images/${product.productImage}`" alt="" class="">
             </div>
             <div class="card-body">
               <h5>{{product.productTitle}}</h5>
-              <p>{{product.productPrice}}</p>
+              <p>£{{product.productPrice}}</p>
               <p>{{error}}</p>
               <RouterLink :to="`/products/${product.id}`">
                 <button class="btn btn-primary">More info</button>

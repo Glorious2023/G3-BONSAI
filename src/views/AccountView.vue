@@ -1,43 +1,31 @@
 <template>
-    <div>
+    <div class="img-overlay">
         <img src="../assets/images/login.jpg" alt="" class="img-fluid">
     </div>
     <div class="container">
-        <form @submit.prevent="handlesubmit" class="row g-3 needs-validation mt-5" novalidate>
-            <div class="col-md-4 position-relative">
-                <label for="validationTooltipUsername" class="form-label">Username</label>
-                <div class="input-group has-validation">
-                    <input type="text" class="form-control" id="validationTooltipUsername" aria-describedby="validationTooltipUsernamePrepend" required>
-                    <div class="invalid-tooltip">
-                        Please choose a unique and valid username.
-                    </div>
+        <form class="row g-3  mt-5">
+            <div class="col-md-4">
+                <label class="form-label">Username</label>
+                <div>
+                    <input v-model="username" type="text" class="form-control"  required>
                 </div>
             </div>
             <div class="col-12">
-                <button class="btn btn-primary" type="submit">Register</button>
+                <button v-on:click="register" class="btn btn-primary">Register</button>
             </div>
         </form>
+        <div class="mb-5">
+            Already Registered?
+             <router-link to='/login'>
+                <b>Log in</b>
+            </router-link>
+        </div>
     </div>
-    <div class="container">
-        <form @submit.prevent="handlesubmit" class="row g-3 needs-validation mt-5" novalidate>
-            <div class="col-md-4 position-relative">
-                <label for="validationTooltipUsername" class="form-label">Username</label>
-                <div class="input-group has-validation">
-                    <input type="text" class="form-control" id="validationTooltipUsername" aria-describedby="validationTooltipUsernamePrepend" required>
-                    <div class="invalid-tooltip">
-                        Please choose a unique and valid username.
-                    </div>
-                </div>
-            </div>
-            <div class="col-12">
-                <button class="btn btn-primary" type="submit">Login</button>
-            </div>
-        </form>
-    </div>
+    
 </template>
 
 <script>
-import axios from 'axios'
+// import axios from 'axios'
 export default {
     name:'AccountView',
     data(){
@@ -46,23 +34,12 @@ export default {
         }
     },
     methods: {
-        handlesubmit(){
-           const data ={
-                username:this.username
-           };
-           axios.post('https://tbhpwebdevapi.azurewebsites.net/api/BonsaiV2/RegisterUser',data)
-            .then(
-            res => {
-                console.log(res)
-                }
-            )
-            .catch(
-            err => {
-                console.log(err)
-                }
-            )
+        async register(){
+        //   let result = await axios.get('https://tbhpwebdevapi.azurewebsites.net/api/BonsaiV2/RegisterUser',{username:this.username})
+        //   console.warn(result)
+        //   if(result.status==201){alert("successfull")}
+        console.warn("signup",this.username)  
         }
-        
     }
 }
 </script>

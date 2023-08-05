@@ -23,7 +23,7 @@
         <div class="row g-0">
           <div class="col-md-4">
             <h2>{{$route.params.id}}</h2>
-            <img :src="queryProduct.productImage" class="img-fluid rounded-start" alt="...">
+            <img :src="queryProduct.productImage" class="img-fluid rounded-start" alt="">
           </div>
           <div class="col-md-8">
             <div class="card-body">

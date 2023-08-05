@@ -29,7 +29,7 @@
       <form class="d-flex" role="search">
         <div>
           <router-link to='/basket' class="nav-link">
-          <img src="../assets/images/shopping-cart.png" class="" alt="">
+            <Shopp/>
         </router-link>
         </div>
       </form>
@@ -40,8 +40,12 @@
 </template>
 
 <script>
+import Shopp from '@/components/Shopp.vue'
 export default {
-    name:'NavBarComponent'
+    name:'NavBarComponent',
+    components:{
+      Shopp
+    }
 }
 </script>
 
