@@ -1,8 +1,12 @@
 <template>
-    <div class="img-overlay">
-        <img src="../assets/images/login.jpg" alt="" class="img-fluid">
+    <div class="card mb-3" style="max-width: 2000px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+       <img src="../assets/images/login.jpg" alt="" class="img-fluid">
     </div>
-    <div class="container">
+    <div class="col-md-8">
+      <div class="card-body">
+        <div class="container">
         <form class="row g-3  mt-5">
             <div class="col-md-4">
                 <label class="form-label">Username</label>
@@ -21,6 +25,10 @@
             </router-link>
         </div>
     </div>
+      </div>
+    </div>
+  </div>
+</div>
     
 </template>
 
